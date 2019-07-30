@@ -1,0 +1,11 @@
+sudo bash docker/scripts/dev_start.sh		#启动容器
+sudo bash docker/scripts/dev_into.sh		#进入容器
+bash scripts/bootstrap.sh			#启动dreamview
+
+
+source scripts/apollo_base.sh			#添加路径
+rosbag play demo_1.5.bag --loop			#循环demo
+
+#演示环境
+bash docker/scripts/release_start.sh
+bash docker/scripts/release_into.sh
