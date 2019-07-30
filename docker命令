@@ -1,0 +1,6 @@
+拉取镜像：
+docker pull zsj0305/sem_seg
+新增tag：
+docker push zsj0305/sem_seg:1.0.0
+进入ubuntu16镜像的terminal
+docker run -t -i ubuntu:16.04 /bin/bash

@@ -1,0 +1,31 @@
+https://www.jianshu.com/p/d01aabf7bd65
+
+anaconda安装
+wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
+./Anaconda3-5.1.0-Linux-x86_64.sh 
+将 export PATH=/home/apollo/anaconda3/bin:$PATH 加至~/.bashrc
+source ~/.bashrc
+验证安装成功
+python -V
+显示：Python 3.6.4 :: Anaconda, Inc.
+
+conda安装tensorflow
+conda create -n tf #创建名为tf的虚拟环境
+conda activate tf #进入虚拟环境
+conda install tensorflow-gpu #安装gpu版的tensorflow
+或
+anaconda search -t conda tensorflow
+anaconda show USER/PACKAGE //USER/PACKAGE就是查出来的Name
+
+cuda && cudnn
+https://blog.csdn.net/wanzhen4330/article/details/81699769
+
+修改当前环境
+export PYTHONPATH=/home/gordon/python-virtual-environments/RL_2018HW/lib/python3.5/site-packages
+
+版本：
+tensorflow1.5~1.10使用cuda9.0和cudnn7.0.5
+
+解决/usr/bin/ld: cannot find -lxxx 问题(注意这里的-l,so文件时没有了)
+sudo ln -s 源文件 目标文件
